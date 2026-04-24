@@ -6,39 +6,39 @@ deciders: [Name(s) / Team(s)]
 
 # AD: Architectuurkeuze: zelfstandige module vs. ingebouwde module
 
-## Context and Problem Statement
+## Context en Probleembeschrijving
 Kiezen we ervoor om de notificatie module zelfstandig of ingebouwd te maken? 
 
 Hoe wordt de module gepositioneerd ten opzichte van OpenMRS? 
 
-## Decision Drivers
+## Beslissingsfactoren
 
-* [Driver 1: e.g. reduce complexity]
-* [Driver 2: e.g. improve maintainability]
-* [Driver 3: e.g. support scalability]
-* [Driver 4: e.g. fit team knowledge / project constraints]
+* Driver 1: Seperation of Concern
+* Driver 2: Schaalbaarheid
+* Driver 3: Integratiegemak
+* Driver 4: Onderhoudbaarheid
 
-## Considered Options
+## Overwogen Opties
 
-1. [Option 1]
-2. [Option 2]
-3. [Option 3]
+1. Zelfstandig
+2. Ingebouwd
 
-## Decision Outcome
+## Resultaten
 
-We decided to use **[chosen option]**.
+We hebben gekozen om de module **Zelfstandig**, dus losstaand van OpenMRS te ontwikkelen. 
 
-This option was chosen because [main reason]. Other options such as [rejected options] were not selected because [reason they do not fit the context].
+Onze opdracht beschrijving verplicht ons al om deze keuze te maken. Wel zijn we ook van mening dat een losstaande module met voordelen komt zoals:
 
-### Consequences
+* Seperation of Concern: OpenMRS is bedoelt voor het handelen van klinische data, niet voor het versturen van notificaties. 
+* Schaalbaarheid: De zelfstandige module kan horizontaal opschalen door meerdere instanties te draaien, wat handig is bij een toenemend aantal notificaties of gebruikers.
+* Integratiegemak: Een losstaande applicatie kan op een centrale plek verbonden worden met OpenMRS, waardoor het eenvoudiger wordt om wijzigingen of uitbreidingen door te voeren zonder impact op de kern van OpenMRS.
+* Onderhoudbaarheid: Als de module niet ingebouwd is, conflicten updates van OpenMRS niet met onze module. De FHIR standaard blijft ook gelijk waar we de informatie voor onze notificaties vandaan halen. 
 
-* Good, because [positive consequence].
-* Good, because [positive consequence].
-* Bad, because [negative consequence / trade-off].
-* Bad, because [negative consequence / risk].
+### Gevolgen
 
-## More Information
+* Goed, meer flexibiliteit en integratiegemakt t.o.v. ingebouwde module. 
+* Goed, betere seperation of concern en onderhoudbaarheid
+* Slecht, hogere complexiteit in beheer.
 
-* [Relevant documentation, article, diagram, standard, or source]
-* [Related architectural decision]
-* [Follow-up decision that still needs to be made]
+## Meer Informatie
+*Geen verdere informatie bij deze ADR*
