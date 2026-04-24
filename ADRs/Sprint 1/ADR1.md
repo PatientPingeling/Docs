@@ -1,44 +1,43 @@
 ---
-status: [Proposed | Accepted | Deprecated | Superseded]
-date: DD-MM-YYYY
+status: [Proposed]
+date: 24/04/2026
 deciders: [Name(s) / Team(s)]
 ---
 
-# AD: [Korte titel]
+# AD: Architectuurkeuze: zelfstandige module vs. ingebouwde module
 
-## Context en Probleembeschrijving
+## Context and Problem Statement
+Kiezen we ervoor om de notificatie module zelfstandig of ingebouwd te maken? 
 
-[Describe the situation, background, and problem that needs an architectural decision.]
+Hoe wordt de module gepositioneerd ten opzichte van OpenMRS? 
 
-[Optional guiding question: What needs to be decided?]
-
-## Beslissingsfactoren
+## Decision Drivers
 
 * [Driver 1: e.g. reduce complexity]
 * [Driver 2: e.g. improve maintainability]
 * [Driver 3: e.g. support scalability]
 * [Driver 4: e.g. fit team knowledge / project constraints]
 
-## Overwogen Opties
+## Considered Options
 
 1. [Option 1]
 2. [Option 2]
 3. [Option 3]
 
-## Resultaten
+## Decision Outcome
 
 We decided to use **[chosen option]**.
 
 This option was chosen because [main reason]. Other options such as [rejected options] were not selected because [reason they do not fit the context].
 
-### Gevolgen
+### Consequences
 
 * Good, because [positive consequence].
 * Good, because [positive consequence].
 * Bad, because [negative consequence / trade-off].
 * Bad, because [negative consequence / risk].
 
-## Meer Informatie
+## More Information
 
 * [Relevant documentation, article, diagram, standard, or source]
 * [Related architectural decision]
